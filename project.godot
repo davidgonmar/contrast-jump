@@ -1,0 +1,77 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Contrast Jump"
+run/main_scene="res://SplashScene/splashScene.tscn"
+boot_splash/image="res://Resources/Textures/blackRectangle.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+
+[autoload]
+
+playerStats="*res://Globals/UserInfo/playerStats.gd"
+saveLoad="*res://Globals/GlobalFunctions/saveLoad.gd"
+skinsInfo="*res://Globals/ReadOnlyData/skinsInfo.gd"
+screenSize="*res://Globals/GlobalFunctions/screenSize.gd"
+userConfig="*res://Globals/UserInfo/userConfig.gd"
+changingColorBackground="*res://Globals/ChangingColorBackground/changingColorBackground.tscn"
+cameraMain="*res://Globals/Camera/cameraMain.tscn"
+fadeInOutBackground="*res://Globals/Transitions/FadeInOut/fadeInOutBackground.tscn"
+FPSMonitor="*res://Globals/FPSMonitor/FPSMonitor.tscn"
+FPSLimiter="*res://Globals/FPSLimiter/FPSLimiter.gd"
+sceneHandler="*res://Globals/GlobalFunctions/sceneHandler.gd"
+audioHandler="*res://Globals/GlobalFunctions/audioHandler/audioHandler.tscn"
+localeSetter="*res://Globals/GlobalFunctions/localeSetter.gd"
+
+[display]
+
+window/size/width=1080
+window/size/height=1920
+window/vsync/use_vsync=false
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="keep_width"
+
+[editor]
+
+convert_text_resources_to_binary_on_export=true
+
+[input]
+
+Click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="background"
+2d_physics/layer_2="enemy"
+2d_physics/layer_3="player"
+
+[locale]
+
+translations=PoolStringArray( "res://Resources/Translations/translations.en.translation", "res://Resources/Translations/translations.es.translation" )
+locale_filter=[ 0, [  ] ]
+
+[physics]
+
+common/physics_fps=144
+
+[rendering]
+
+quality/filters/msaa=4

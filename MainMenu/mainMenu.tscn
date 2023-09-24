@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://MainMenu/mainMenuGUI/mainMenuGUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MainMenu/mainMenu.gd" type="Script" id=2]
+
+[node name="mainMenu" type="Node"]
+script = ExtResource( 2 )
+
+[node name="mainMenuGUICanvasLayer" parent="." instance=ExtResource( 1 )]

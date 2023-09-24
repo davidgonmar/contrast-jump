@@ -1,0 +1,489 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Resources/Textures/xTexture.png" type="Texture" id=1]
+[ext_resource path="res://SettingsMenu/settingsMenu.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Fonts/titanOneRegular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Resources/Textures/settingsSliderGrabber.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Textures/settingsSliderBg.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="DynamicFont" id=2]
+size = 110
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 180, 40 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="DynamicFont" id=13]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 50
+font_data = ExtResource( 3 )
+
+[node name="settingsMenuMain" type="Node"]
+script = ExtResource( 2 )
+
+[node name="settingsMenuCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="goBackButton" type="TextureButton" parent="settingsMenuCanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -280.0
+margin_top = 58.0
+margin_bottom = 208.0
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settingsMenuControl" type="Control" parent="settingsMenuCanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = -700.0
+margin_right = 450.0
+margin_bottom = 700.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settingsTitle" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl"]
+anchor_right = 1.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="titlePanel" type="Panel" parent="settingsMenuCanvasLayer/settingsMenuControl/settingsTitle"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="titleLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/settingsTitle"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "TEST"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="actualSettingsControl" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 164.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settingsPanel" type="Panel" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 4.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="generalMargin" type="MarginContainer" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settingsVContainer" type="VBoxContainer" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 850.0
+margin_bottom = 1186.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musicControl" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer"]
+margin_right = 800.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="musicLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/musicControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -79.0
+margin_right = 553.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 4 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musicButton" type="TextureButton" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/musicControl"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -79.0
+margin_bottom = 79.0
+
+[node name="musicButtonLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/musicControl/musicButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="showFPSControl" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer"]
+margin_top = 162.0
+margin_right = 800.0
+margin_bottom = 320.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="showFPSLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/showFPSControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -79.0
+margin_right = 553.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 6 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="showFPSButton" type="TextureButton" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/showFPSControl"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -79.0
+margin_bottom = 79.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="showFPSButtonLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/showFPSControl/showFPSButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="maxFPSControl" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer"]
+margin_top = 324.0
+margin_right = 800.0
+margin_bottom = 482.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="maxFPSLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/maxFPSControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -79.0
+margin_right = 553.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 7 )
+text = "ss"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="maxFPSButton" type="TextureButton" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/maxFPSControl"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -287.0
+margin_top = -79.0
+margin_bottom = 79.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="maxFPSLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/maxFPSControl/maxFPSButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 8 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="saturationControl" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer"]
+margin_top = 486.0
+margin_right = 800.0
+margin_bottom = 644.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="saturationLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/saturationControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -79.0
+margin_right = 553.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 9 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="saturationMargin" type="MarginContainer" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/saturationControl"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = -79.0
+margin_bottom = 79.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="saturationScroll" type="HSlider" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/saturationControl/saturationMargin"]
+margin_right = 260.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_icons/grabber_disabled = ExtResource( 4 )
+custom_icons/grabber_highlight = ExtResource( 4 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = SubResource( 10 )
+custom_styles/grabber_area_highlight = SubResource( 11 )
+custom_styles/grabber_area = SubResource( 12 )
+max_value = 1.0
+step = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="brightnessControl" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer"]
+margin_top = 648.0
+margin_right = 800.0
+margin_bottom = 806.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="brightnessLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/brightnessControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -79.0
+margin_right = 553.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 13 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="brightnessMargin" type="MarginContainer" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/brightnessControl"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = -79.0
+margin_bottom = 79.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="brightnessScroll" type="HSlider" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/brightnessControl/brightnessMargin"]
+margin_right = 260.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_icons/grabber_disabled = ExtResource( 4 )
+custom_icons/grabber_highlight = ExtResource( 4 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = SubResource( 10 )
+custom_styles/grabber_area_highlight = SubResource( 11 )
+custom_styles/grabber_area = SubResource( 12 )
+max_value = 1.0
+step = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="controlsControl" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer"]
+margin_top = 810.0
+margin_right = 800.0
+margin_bottom = 968.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="controlsLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/controlsControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -79.0
+margin_right = 553.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 14 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="controlsButton" type="TextureButton" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/controlsControl"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -287.0
+margin_top = -79.0
+margin_bottom = 79.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="controlsButtonLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/controlsControl/controlsButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 15 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="languageControl" type="Control" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer"]
+margin_top = 972.0
+margin_right = 800.0
+margin_bottom = 1136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="languageLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/languageControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -79.0
+margin_right = 553.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 16 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="languageButton" type="TextureButton" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/languageControl"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -287.0
+margin_top = -82.0
+margin_bottom = 82.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="languageButtonLabel" type="Label" parent="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/languageControl/languageButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 17 )
+align = 1
+valign = 1
+
+[node name="settingsMainTween" type="Tween" parent="."]
+
+[node name="musicButtonTween" type="Tween" parent="."]
+
+[node name="showFPSButtonTween" type="Tween" parent="."]
+
+[node name="maxFPSButtonTween" type="Tween" parent="."]
+
+[node name="controlsButtonTween" type="Tween" parent="."]
+
+[node name="languageButtonTween" type="Tween" parent="."]
+
+[connection signal="pressed" from="settingsMenuCanvasLayer/goBackButton" to="." method="_on_goBackButton_pressed"]
+[connection signal="pressed" from="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/musicControl/musicButton" to="." method="_on_musicButton_pressed"]
+[connection signal="pressed" from="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/showFPSControl/showFPSButton" to="." method="_on_showFPSButton_pressed"]
+[connection signal="pressed" from="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/maxFPSControl/maxFPSButton" to="." method="_on_maxFPSButton_pressed"]
+[connection signal="pressed" from="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/controlsControl/controlsButton" to="." method="_on_controlsButton_pressed"]
+[connection signal="pressed" from="settingsMenuCanvasLayer/settingsMenuControl/actualSettingsControl/generalMargin/settingsVContainer/languageControl/languageButton" to="." method="_on_languageButton_pressed"]

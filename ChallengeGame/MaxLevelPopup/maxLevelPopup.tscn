@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ChallengeGame/MaxLevelPopup/maxLevelPopup.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Fonts/titanOneRegular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 2 )
+
+[node name="maxLevelPopupCanvasLayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="maxLevelPopUp" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -388.0
+margin_right = 400.0
+margin_bottom = 407.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="maxLevelPoupPanel" type="Panel" parent="maxLevelPopUp"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="messageLabel" type="Label" parent="maxLevelPopUp"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="popupTween" type="Tween" parent="."]

@@ -1,0 +1,195 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://EndlessGame/LostGUI/lostGUIMain.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Textures/homeButton.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Textures/tryAgainButton.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Fonts/titanOneRegular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_color = Color( 1, 1, 1, 0.156863 )
+shadow_size = 20
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 120
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 120
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="lostGUICanvasLayer" type="CanvasLayer"]
+layer = 50
+script = ExtResource( 1 )
+
+[node name="lostGUIMain" type="Control" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -400.0
+margin_top = 495.0
+margin_right = 400.0
+margin_bottom = 1425.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lostGUIBackground" type="Panel" parent="lostGUIMain"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vContainer" type="VBoxContainer" parent="lostGUIMain"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bestScoreLabelMargin" type="MarginContainer" parent="lostGUIMain/vContainer"]
+margin_right = 800.0
+margin_bottom = 307.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vSplitter" type="VSplitContainer" parent="lostGUIMain/vContainer/bestScoreLabelMargin"]
+margin_right = 800.0
+margin_bottom = 307.0
+dragger_visibility = 2
+
+[node name="bestScoreStringLabel" type="Label" parent="lostGUIMain/vContainer/bestScoreLabelMargin/vSplitter"]
+margin_right = 800.0
+margin_bottom = 153.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+
+[node name="bestScoreLabel" type="Label" parent="lostGUIMain/vContainer/bestScoreLabelMargin/vSplitter"]
+margin_top = 153.0
+margin_right = 800.0
+margin_bottom = 307.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="scoreLabelMargin" type="MarginContainer" parent="lostGUIMain/vContainer"]
+margin_top = 311.0
+margin_right = 800.0
+margin_bottom = 618.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="vSplitter" type="VSplitContainer" parent="lostGUIMain/vContainer/scoreLabelMargin"]
+margin_right = 800.0
+margin_bottom = 307.0
+dragger_visibility = 2
+
+[node name="scoreStringLabel" type="Label" parent="lostGUIMain/vContainer/scoreLabelMargin/vSplitter"]
+margin_right = 800.0
+margin_bottom = 153.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+
+[node name="scoreLabel" type="Label" parent="lostGUIMain/vContainer/scoreLabelMargin/vSplitter"]
+margin_top = 153.0
+margin_right = 800.0
+margin_bottom = 307.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 5 )
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="hContainer" type="HBoxContainer" parent="lostGUIMain/vContainer"]
+margin_top = 622.0
+margin_right = 800.0
+margin_bottom = 930.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="goToMenuButtonMargin" type="MarginContainer" parent="lostGUIMain/vContainer/hContainer"]
+margin_right = 398.0
+margin_bottom = 308.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 60
+custom_constants/margin_top = 25
+custom_constants/margin_left = 80
+custom_constants/margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="goToMenuButton" type="TextureButton" parent="lostGUIMain/vContainer/hContainer/goToMenuButtonMargin"]
+margin_left = 80.0
+margin_top = 25.0
+margin_right = 338.0
+margin_bottom = 258.0
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="tryAgainButtonMargin" type="MarginContainer" parent="lostGUIMain/vContainer/hContainer"]
+margin_left = 402.0
+margin_right = 800.0
+margin_bottom = 308.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 90
+custom_constants/margin_top = 25
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tryAgainButton" type="TextureButton" parent="lostGUIMain/vContainer/hContainer/tryAgainButtonMargin"]
+margin_left = 50.0
+margin_top = 25.0
+margin_right = 308.0
+margin_bottom = 258.0
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="animationTween" type="Tween" parent="."]
+
+[node name="textTween" type="Tween" parent="."]
+
+[connection signal="pressed" from="lostGUIMain/vContainer/hContainer/goToMenuButtonMargin/goToMenuButton" to="." method="_on_goToMenuButton_pressed"]
+[connection signal="pressed" from="lostGUIMain/vContainer/hContainer/tryAgainButtonMargin/tryAgainButton" to="." method="_on_tryAgainButton_pressed"]

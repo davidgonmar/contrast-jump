@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ChallengeGame/challengeGameMain.gd" type="Script" id=1]
+[ext_resource path="res://ChallengeGame/InGameGUI/inGameGUIChallenge.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ChallengeGame/WonGUI/wonGUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ChallengeGame/LostGUI/lostGUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ChallengeGame/MaxLevelPopup/maxLevelPopup.tscn" type="PackedScene" id=5]
+
+[node name="challengeGameMain" type="Node"]
+script = ExtResource( 1 )
+
+[node name="inGameGUICanvasLayer" parent="." instance=ExtResource( 2 )]
+
+[node name="wonGUICanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="lostGUICanvasLayer" parent="." instance=ExtResource( 4 )]
+
+[node name="maxLevelPopupCanvasLayer" parent="." instance=ExtResource( 5 )]
